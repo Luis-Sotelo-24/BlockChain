@@ -1,70 +1,157 @@
-# Getting Started with Create React App
 
-This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
+# NFT Webdox
 
-## Available Scripts
+NFT Webdox es un sistema descentralizado de registro basado en tecnología blockchain y tokens no fungibles (NFTs). El proyecto tiene como objetivo demostrar la aplicación práctica de conceptos de sistemas distribuidos, tales como descentralización, consenso, inmutabilidad y comunicación entre nodos, utilizando una arquitectura Web3 con un frontend desarrollado en React y un contrato inteligente escrito en Solidity.
 
-In the project directory, you can run:
+Este proyecto fue implementado como parte del curso de Sistemas Distribuidos, aplicando los conocimientos expuestos en clase sobre arquitecturas descentralizadas y tecnologías Web3.
 
-### `npm start`
+## Scripts Disponibles
 
-Runs the app in the development mode.\
-Open [http://localhost:3000](http://localhost:3000) to view it in your browser.
+En el directorio del proyecto, puedes ejecutar:
 
-The page will reload when you make changes.\
-You may also see any lint errors in the console.
+### npm start
 
-### `npm test`
+Ejecuta la aplicación en modo desarrollo.
+Abre http://localhost:3000
+ para verla en el navegador.
 
-Launches the test runner in the interactive watch mode.\
-See the section about [running tests](https://facebook.github.io/create-react-app/docs/running-tests) for more information.
+La página se recarga automáticamente cuando realizas cambios.
+También verás errores de lint en la consola si los hay.
 
-### `npm run build`
+### npm test
 
-Builds the app for production to the `build` folder.\
-It correctly bundles React in production mode and optimizes the build for the best performance.
+Ejecuta el entorno de pruebas en modo interactivo.
+Ver la sección sobre ejecución de pruebas
+ para más información.
 
-The build is minified and the filenames include the hashes.\
-Your app is ready to be deployed!
+### npm run build
 
-See the section about [deployment](https://facebook.github.io/create-react-app/docs/deployment) for more information.
+Genera una versión optimizada para producción en la carpeta build.
+Los archivos son minificados y los nombres incluyen hash para garantizar caché eficiente.
 
-### `npm run eject`
+La aplicación queda lista para ser desplegada en un entorno de producción.
+Para más información sobre despliegue, ver:
+Deployment
 
-**Note: this is a one-way operation. Once you `eject`, you can't go back!**
+### npm run eject
 
-If you aren't satisfied with the build tool and configuration choices, you can `eject` at any time. This command will remove the single build dependency from your project.
+Advertencia: esta acción es irreversible.
 
-Instead, it will copy all the configuration files and the transitive dependencies (webpack, Babel, ESLint, etc) right into your project so you have full control over them. All of the commands except `eject` will still work, but they will point to the copied scripts so you can tweak them. At this point you're on your own.
+Este comando expone toda la configuración interna de Create React App (Webpack, Babel, ESLint, etc.) para permitir personalizaciones avanzadas.
+Solo debe usarse si realmente necesitas control total sobre la configuración.
 
-You don't have to ever use `eject`. The curated feature set is suitable for small and middle deployments, and you shouldn't feel obligated to use this feature. However we understand that this tool wouldn't be useful if you couldn't customize it when you are ready for it.
+## Arquitectura del Sistema
 
-## Learn More
+La arquitectura de NFT Webdox se basa en un modelo distribuido compuesto por:
 
-You can learn more in the [Create React App documentation](https://facebook.github.io/create-react-app/docs/getting-started).
+1. Interfaz Web (React + Web3.js)
 
-To learn React, check out the [React documentation](https://reactjs.org/).
+  Permite registrar, consultar y validar NFTs.
 
-### Code Splitting
+  Se comunica con Metamask para firmar transacciones.
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/code-splitting](https://facebook.github.io/create-react-app/docs/code-splitting)
+  Interactúa con el contrato inteligente usando Web3.js o Ethers.js.
 
-### Analyzing the Bundle Size
+2. Smart Contract (Solidity)
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size](https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size)
+  Funciones principales:
 
-### Making a Progressive Web App
+  Registrar un activo y generar un NFT asociado.
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app](https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app)
+  Guardar metadatos del registro.
 
-### Advanced Configuration
+  Verificar la propiedad de un NFT.
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/advanced-configuration](https://facebook.github.io/create-react-app/docs/advanced-configuration)
+  Consultar registros existentes.
 
-### Deployment
+  El contrato se despliega en una red Ethereum compatible (local o testnet).
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/deployment](https://facebook.github.io/create-react-app/docs/deployment)
+3. Blockchain (Red EVM)
 
-### `npm run build` fails to minify
+  Actúa como:
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify](https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify)
+  Libro mayor distribuido.
+
+  Mecanismo de consenso.
+
+  Almacenamiento inmutable y transparente.
+
+## Diagrama General de Arquitectura
+                +---------------------------+
+                |        Usuario            |
+                +-------------+-------------+
+                              |
+                              v
+                +---------------------------+
+                |       Interfaz Web        |
+                |         (React)           |
+                +-------------+-------------+
+                              |
+                    Web3.js / Metamask
+                              |
+                              v
+                +---------------------------+
+                |   Smart Contract (Solidity)|
+                +-------------+--------------+
+                              |
+                              v
+                +---------------------------+
+                |     Blockchain (EVM)      |
+                |  Registro de NFTs / TXs   |
+                +---------------------------+
+
+## Objetivo Académico
+
+NFT Webdox fue desarrollado para aplicar conceptos clave del curso de Sistemas Distribuidos, como:
+
+  Descentralización computacional
+
+  Comunicación entre nodos
+
+  Consenso distribuido
+
+  Inmutabilidad del estado
+
+  Ausencia de servidor central
+
+  Smart contracts como componentes determinísticos distribuidos
+
+El proyecto funciona como una aplicación práctica de la teoría expuesta en el tema de tecnologías Web3 y sistemas distribuidos.
+
+## Conclusiones
+
+La integración entre React, Web3 y contratos inteligentes permite construir sistemas auténticamente descentralizados.
+
+La blockchain proporciona un mecanismo robusto de almacenamiento inmutable ideal para registros digitales.
+
+El uso de NFTs permite representar la propiedad de activos de manera verificable y transparente.
+
+NFT Webdox demuestra que los sistemas distribuidos pueden aplicarse a casos reales como certificación, validación de documentos y trazabilidad.
+
+La arquitectura distribuida mejora la seguridad evitando un punto único de fallo.
+
+## Recomendaciones
+
+Integrar almacenamiento descentralizado para metadatos (IPFS).
+
+Implementar autenticación por roles dentro del contrato inteligente.
+
+Añadir soporte para múltiples wallets (Coinbase Wallet, WalletConnect).
+
+Incorporar pruebas automatizadas para mayor robustez.
+
+Ampliar el proyecto hacia un caso real: certificados académicos, contratos, documentos notariales, etc.
+
+## Tecnologías Utilizadas
+
+React
+
+Web3.js / Ethers.js
+
+Solidity
+
+Metamask
+
+Node.js
+
+Ganache / Hardhat / redes EVM
