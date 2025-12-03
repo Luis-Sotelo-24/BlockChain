@@ -1,7 +1,7 @@
 
 # NFT Webdox
 
-NFT Webdox es un sistema descentralizado de registro basado en tecnología blockchain y tokens no fungibles (NFTs). El proyecto tiene como objetivo demostrar la aplicación práctica de conceptos de sistemas distribuidos, tales como descentralización, consenso, inmutabilidad y comunicación entre nodos, utilizando una arquitectura Web3 con un frontend desarrollado en React y un contrato inteligente escrito en Solidity.
+NFT Webdox es un sistema descentralizado de registro basado en tecnología blockchain y tokens no fungibles (NFTs). El proyecto tiene como objetivo demostrar la aplicación práctica de conceptos de sistemas distribuidos, tales como descentralización, consenso, inmutabilidad y comunicación entre nodos.
 
 Este proyecto fue implementado como parte del curso de Sistemas Distribuidos, aplicando los conocimientos expuestos en clase sobre arquitecturas descentralizadas y tecnologías Web3.
 
