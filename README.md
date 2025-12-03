@@ -141,17 +141,3 @@ Añadir soporte para múltiples wallets (Coinbase Wallet, WalletConnect).
 Incorporar pruebas automatizadas para mayor robustez.
 
 Ampliar el proyecto hacia un caso real: certificados académicos, contratos, documentos notariales, etc.
-
-## Tecnologías Utilizadas
-
-React
-
-Web3.js / Ethers.js
-
-Solidity
-
-Metamask
-
-Node.js
-
-Ganache / Hardhat / redes EVM
